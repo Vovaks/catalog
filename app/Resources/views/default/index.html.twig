@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% javascripts
+    'asset/js/main.js' %}
+    <script src="{{ asset_url }}"></script>
+    <script src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    {% endjavascripts %}
+
+    {% stylesheets
+    'asset/css/styles.css' %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
+    {% endstylesheets %}
+
+    <div id="wrapper">
+        <div id="container">
+            <div id = titleLeft> <h1>Catalog</h1></div>
+            <div id = titleRight><h1>Files in the directory</h1></div>
+            <div id="catalog">
+                {{ arrayTree|raw }}
+            </div>
+            <div id="dir">
+                {{ directory|raw }}
+            </div>
+        </div>
+
+        <div class="footer">
+            Full size: {{ catalogSize }} MB ,
+            Files: {{ countFilesCatalog }}<br>
+            Directory size: <span id='sizeDir'>{{ catalogSize }}</span> MB
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
