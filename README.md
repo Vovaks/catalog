@@ -4,15 +4,16 @@ Catalog
 Introduction
 ========================
 
-Display tree and catalog files.
+Displaying tree and catalog files.
 
 The program can synchronize the database via console command on the basis of
 directory in the file system.
 
 The program stores the directory structure and file information.
 
-In the left part of the screen in a tree directory. When you click on any directory 
-folder in the right-hand side of the screen a list of the current directory files.
+The tree directory is on the left part of the screen.  When you click on any folder in this directory,
+located on right side of the screen, you will see the list of current files from directory.
+
 At the bottom displays information about the number of files in the current directory,
 the total count of files in the database, and the total file size.
 
@@ -22,11 +23,11 @@ Installing
 
 1.Clone the repository
 
-/*2.Rename 'app/config/parameters.ini.dist' to 'app/config/parameters.ini'*/
+2.Rename 'app/config/parameters.yml.dist' to 'app/config/parameters.yml'
 
-3.Run 'php bin/vendors install' to install all the required vendors
+3.Run 'php composer.phar update' to install all the required vendors
 
-/*4.Install the assets with 'php app/console assets:install web'*/
+4.Install the assets with 'php app/console assets:install web'
 
 5.Create the database with 'php app/console doctrine:database:create'
 
@@ -40,7 +41,7 @@ Installing
 Add catalog path
 --------------
 
-1. Add you directory in the path: "src/load_files"
+1. Add your directory to the path: "src/load_files"
 
 OR
 

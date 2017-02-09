@@ -55,12 +55,17 @@ class DefaultController extends Controller
     public function filedDirectoryList()
     {
         $filesdirectory = $this->filesDirectoryAll();
-
+        $htmlText="";
         for ($i = 0; $i <= $count = (count($filesdirectory)) - 1; $i++) {
 
             $htmlText[$i] = $filesdirectory[$i]['name'];
         }
-        $filesDirectoryList = $comma_separated = implode("<br>", $htmlText);
+        if(!empty( $htmlText)){
+            $filesDirectoryList = $comma_separated = implode("<br>", $htmlText);
+        }else
+        {
+            $filesDirectoryList=$htmlText;
+        }
         return $filesDirectoryList;
     }
 
